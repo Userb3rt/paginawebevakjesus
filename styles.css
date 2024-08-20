@@ -100,32 +100,54 @@ nav {
 }
 
 header {
-    /* Fondo con imagen de fondo, centrada y ajustada al contenedor */
-    background: url('assets/cielo.jpg') no-repeat center center/cover;
-    /* Color blanco para el texto del encabezado */
+    /* Fondo con imagen de fondo, ajustada para cubrir todo el contenedor */
+    background: url('assets/cielo.jpg') no-repeat center center;
+    background-size: cover;
+    /* Altura fija para el header */
+    height: 100vh; /* Hace que el header ocupe el 100% de la altura de la ventana */
+    /* Color del texto */
     color: #fff;
-    /* Relleno interno grande para el contenido del encabezado */
-    padding: 100px 20px;
     /* Alinea el texto al centro */
     text-align: center;
-    /* Efecto parallax para la imagen de fondo */
-    background-attachment: fixed;
+    /* Flexbox para centrar el contenido vertical y horizontalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Sombra de texto para mejor legibilidad sobre la imagen */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    /* Opcional: Añadir un overlay oscuro sobre la imagen para mejor contraste */
+    position: relative;
 }
 
-header h2 {
-    /* Tamaño de fuente grande para el título del encabezado */
-    font-size: 2.5em;
-    /* Espacio inferior entre el título y el párrafo */
-    margin-bottom: 10px;
-    /* Sombra de texto para el título */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+header::before {
+    /* Overlay oscuro */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cambia el nivel de opacidad según lo necesites */
+    z-index: 0;
+}
+
+header h1, header p {
+    /* Asegura que el texto esté por encima del overlay */
+    z-index: 1;
+    margin: 0;
+}
+
+header h1 {
+    /* Tamaño del título */
+    font-size: 3em;
+    margin-bottom: 20px;
 }
 
 header p {
-    /* Tamaño de fuente para el párrafo del encabezado */
-    font-size: 1.2em;
-    /* Sombra de texto para el párrafo */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    /* Tamaño del párrafo */
+    font-size: 1.5em;
+    max-width: 600px;
 }
 
 section {
