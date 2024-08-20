@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de"> <!-- Establece el idioma del documento como alemán -->
+<head>
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para que sea responsive -->
+    <title>Evak Jesus Zürich</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@400;700&display=swap"> <!-- Importa la fuente 'Anek Devanagari' desde Google Fonts -->
+    <link rel="stylesheet" href="styles.css"> <!-- Enlaza al archivo CSS externo para estilos -->
+    <script defer> <!-- Añade un script que se ejecutará después de que el documento se haya cargado completamente -->
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('menu-open'); 
+        }
+    </script> <!-- Alterna la clase 'menu-open' en el elemento del menú para mostrarlo u ocultarlo -->
+</head>
+<body>
+    <nav> <!-- Sección de navegación de la página -->
+        <div class="logo">
+            <h1>Evak Jesus Zürich</h1> <!-- Nombre o logotipo del sitio -->
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button> <!-- Botón de menú hamburguesa que llama a la función 'toggleMenu' cuando se hace clic -->
+        <ul class="menu">
+            <li><a href="veranstaltungen.html">Veranstaltungen</a></li>
+            <li><a href="veröffentlichungen.html">Veröffentlichungen</a></li>
+            <li><a href="kalender.html">Kalender</a></li>
+            <li><a href="zeiten.html">Zeiten</a></li>
+            <li><a href="ort.html">Ort</a></li>
+        </ul>        
+    </nav>
+
+    <header> <!-- Sección de encabezado con un mensaje de bienvenida -->
+        <h2>Willkommen bei Evak Jesus Zürich</h2> <!-- Título de bienvenida -->
+        <p>Eine christliche Gemeinschaft, die sich dem Glauben, der Liebe und dem Dienst an unserem Herrn Jesus Christus verpflichtet fühlt.</p>
+        <!-- Párrafo que describe la misión de la comunidad -->
+    </header>
+
+    <section id="veranstaltungen"> <!-- Sección sobre los eventos -->
+        <h2>Veranstaltungen</h2> <!-- Título de la sección de eventos -->
+        <p>Informieren Sie sich über unsere kommenden Veranstaltungen und Aktivitäten.</p>
+        <!-- Párrafo que invita a informarse sobre los próximos eventos y actividades -->
+    </section>
+
+    <section id="veröffentlichungen"> <!-- Sección sobre las publicaciones -->
+        <h2>Veröffentlichungen</h2> <!-- Título de la sección de publicaciones -->
+        <p>Lesen Sie unsere neuesten Veröffentlichungen und Reflexionen.</p>
+        <!-- Párrafo que invita a leer las últimas publicaciones y reflexiones -->
+    </section>
+
+    <section id="kalender"> <!-- Sección del calendario -->
+        <h2>Kalender</h2> <!-- Título de la sección del calendario -->
+        <p>Erkunden Sie unseren Kalender für Aktivitäten und Gottesdienste.</p>
+        <!-- Párrafo que invita a explorar el calendario de actividades y servicios religiosos -->
+    </section>
+
+    <section id="zeiten"> <!-- Sección de los horarios -->
+        <h2>Zeiten</h2> <!-- Título de la sección de horarios -->
+        <p>Überprüfen Sie die Zeiten unserer Gottesdienste und Treffen.</p>
+        <!-- Párrafo que invita a revisar los horarios de los servicios religiosos y reuniones -->
+    </section>
+
+    <section id="ort"> <!-- Sección sobre la ubicación -->
+        <h2>Ort</h2> <!-- Título de la sección de ubicación -->
+        <p>Finden Sie uns in Zürich. Hier ist unsere Adresse und eine Karte, um uns zu finden.</p>
+        <!-- Párrafo que proporciona información sobre la dirección y ubicación en Zürich -->
+    </section>
+
+    <footer> <!-- Pie de página -->
+        <p>&copy; 2024 Evak Jesus Zürich. Alle Rechte vorbehalten.</p> <!-- Declaración de derechos de autor -->
+        <p>Folgen Sie uns auf unseren sozialen Medien: <a href="https://www.facebook.com/EeanJesusSuisse/">Facebook</a> | <a href="#">Instagram</a></p>
+        <!-- Enlaces a las redes sociales de la comunidad -->
+    </footer>
+</body>
+</html>
