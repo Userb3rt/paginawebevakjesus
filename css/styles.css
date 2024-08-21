@@ -101,7 +101,7 @@ nav {
 
 header {
     /* 1Fondo con imagen de fondo, ajustada para cubrir todo el contenedor */
-    background: url('assets/cielo.jpg') no-repeat center center;
+    background: url('../assets/cielo.jpg') no-repeat center center;
     background-size: cover;
     /* Altura fija para el header */
     height: 100vh; /* Hace que el header ocupe el 100% de la altura de la ventana */
