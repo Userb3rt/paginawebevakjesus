@@ -14,7 +14,7 @@ nav {
 header {
     background: url('../assets/cielo.jpg') no-repeat center center;
     background-size: cover;
-    height: 100vh;
+    height: 40vh;
     color: #fff;
     text-align: center;
     display: flex;
