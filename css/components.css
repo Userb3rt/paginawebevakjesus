@@ -1,0 +1,74 @@
+.logo h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.logo h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: #fff;    
+    cursor: pointer;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu li a {
+    color: #fff;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.menu li a:hover {
+    background-color: #004d40;
+    border-radius: 5px;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.5em;
+    max-width: 600px;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #00796b;
+}
+
+section p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #80cbc4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

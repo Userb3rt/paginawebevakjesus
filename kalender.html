@@ -1,48 +1,65 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Veranstaltungen - Evak Jesus Zürich</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@400;700&display=swap">
-    <link rel="stylesheet" href="css/styles.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@400;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/modal.css" />
     <script defer>
-        function toggleMenu() {
-            const menu = document.querySelector('.menu');
-            menu.classList.toggle('menu-open');
-        }
+      function toggleMenu() {
+        const menu = document.querySelector(".menu");
+        menu.classList.toggle("menu-open");
+      }
     </script>
-    
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <div class="logo">
-            <h1><a href="index.html">Evak Jesus Zürich</a></h1>
-        </div>
-        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
-        <ul class="menu">
-            <li><a href="veranstaltungen.html">Veranstaltungen</a></li>
-            <li><a href="veröffentlichungen.html">Veröffentlichungen</a></li>
-            <li><a href="kalender.html">Kalender</a></li>
-            <li><a href="zeiten.html">Zeiten</a></li>
-            <li><a href="ort.html">Ort</a></li>
-        </ul>
+      <div class="logo">
+        <h1><a href="index.html">Evak Jesus Zürich</a></h1>
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+      <ul class="menu">
+        <li><a href="veranstaltungen.html">Veranstaltungen</a></li>
+        <li><a href="veröffentlichungen.html">Veröffentlichungen</a></li>
+        <li><a href="kalender.html">Kalender</a></li>
+        <li><a href="zeiten.html">Zeiten</a></li>
+        <li><a href="ort.html">Ort</a></li>
+        <li><a href="#" id="zunganglogin">Anmelden</a></li>
+      </ul>
     </nav>
 
     <header>
-        <h2>Veranstaltungen</h2>
-        <p>Erfahren Sie mehr über unsere kommenden Veranstaltungen und Aktivitäten.</p>
+      <h2>Veranstaltungen</h2>
+      <p>
+        Erfahren Sie mehr über unsere kommenden Veranstaltungen und Aktivitäten.
+      </p>
     </header>
 
     <section>
-        <h2>Details zu unseren Veranstaltungen</h2>
-        <p>Hier finden Sie detaillierte Informationen über unsere Veranstaltungen.</p>
-        <!-- Aquí puedes añadir contenido específico de los eventos -->
+      <h2>Details zu unseren Veranstaltungen</h2>
+      <p>
+        Hier finden Sie detaillierte Informationen über unsere Veranstaltungen.
+      </p>
+      <!-- Aquí puedes añadir contenido específico de los eventos -->
     </section>
 
     <footer>
-        <p>&copy; 2024 Evak Jesus Zürich. Alle Rechte vorbehalten.</p>
-        <p>Folgen Sie uns auf unseren sozialen Medien: <a href="https://www.facebook.com/EeanJesusSuisse/">Facebook</a> | <a href="#">Instagram</a></p>
+      <p>&copy; 2024 Evak Jesus Zürich. Alle Rechte vorbehalten.</p>
+      <p>
+        Folgen Sie uns auf unseren sozialen Medien:
+        <a href="https://www.facebook.com/EeanJesusSuisse/">Facebook</a> |
+        <a href="#">Instagram</a>
+      </p>
     </footer>
-</body>
+  </body>
+  <script src="js/zungangscript.js"></script>
 </html>

@@ -1,5 +1,6 @@
 // Obtener los elementos del DOM
 const modal = document.getElementById("loginModal");
+const menu = document.querySelector(".menu");
 const zugangLink = document.querySelector("a[id='zunganglogin']");
 const closeModalBtn = document.getElementsByClassName("close")[0];
 
@@ -7,6 +8,7 @@ const closeModalBtn = document.getElementsByClassName("close")[0];
 zugangLink.onclick = function (event) {
   event.preventDefault(); // Prevenir el comportamiento por defecto del enlace
   modal.style.display = "block";
+  menu.classList.toggle("menu-open");
 };
 
 // Cerrar el modal cuando se hace clic en la 'x'
@@ -20,3 +22,6 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+function toggleMenu() {
+  menu.classList.toggle("menu-open");
+}

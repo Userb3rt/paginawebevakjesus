@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para que sea responsive -->
     <title>Evak Jesus Zürich</title> <!-- Título de la página que aparece en la pestaña del navegador -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@400;700&display=swap"> <!-- Importa la fuente 'Anek Devanagari' desde Google Fonts -->
-    <link rel="stylesheet" href="css/styles.css"> <!-- Enlaza al archivo CSS externo para estilos -->
-    <script defer> <!-- Añade un script que se ejecutará después de que el documento se haya cargado completamente -->
-        function toggleMenu() {
-            const menu = document.querySelector('.menu');
-            menu.classList.toggle('menu-open'); 
-        }
-    </script> <!-- Alterna la clase 'menu-open' en el elemento del menú para mostrarlo u ocultarlo -->
+    <!-- Enlaza los archivos CSS desde la misma carpeta -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/modal.css">
 </head>
 <body>
     <nav> <!-- Sección de navegación de la página -->
@@ -77,10 +77,9 @@
             <h2>Anmelden</h2>
             <form>
                 <label for="username">Benutzername eingeben:</label>
-                <input type="text" id="username" name="username" required>
-                <br>
+                <input type="text" id="username" name="username" required><br>
                 <label for="password">Passwort eingeben:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" required><br><br>
                 <button type="submit">Einloggen</button>
             </form>
         </div>

@@ -1,0 +1,12 @@
+body {
+    font-family: 'Anek Devanagari', sans-serif;
+    line-height: 1.6;
+    background-color: #e0f7fa;
+    color: #333;
+    padding-top: 70px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
