@@ -1,51 +1,187 @@
 nav {
-    background-color: #00796b;
-    color: #fff;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgb(35, 59, 79);
+  background: linear-gradient(
+    90deg,
+    rgba(35, 59, 79, 1) 0%,
+    rgba(37, 103, 152, 1) 50%,
+    rgba(35, 59, 79, 1) 100%
+  );
+}
+
+.logo {
+  color: white; /* Color del texto */
+  font-size: 24px; /* Tamaño del texto */
+  display: flex; /* Para alinear la imagen y el texto horizontalmente */
+  align-items: center; /* Centra verticalmente la imagen y el texto */
+}
+
+.logo-img {
+  width: 100px; /* Ajusta el tamaño de la imagen */
+  height: 100px;
+  margin-right: 20px; /* Espacio entre la imagen y el texto */
+  filter: drop-shadow(
+    4px 4px 15px rgba(0, 0, 0, 0.5)
+  ); /* Sombra que sigue la forma del PNG */
 }
 
 header {
-    background: url('../assets/cielo.jpg') no-repeat center center;
-    background-size: cover;
-    height: 40vh;
-    color: #fff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    position: relative;
+  position: relative; /* Asegura que el z-index funcione */
+  background: url("../assets/420608866_3746419558960957_7281320004850299379_n.jpg")
+    no-repeat center center;
+  background-size: cover;
+  height: 40vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* El contenido del header está por encima del pseudo-elemento */
 }
 
 header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.75
+  ); /* Superposición negra semitransparente */
+  z-index: 0; /* Coloca la superposición detrás del contenido del header */
 }
 
+header h2,
+header p {
+  position: relative; /* Asegura que el texto esté por encima de la superposición */
+  z-index: 2; /* El texto se coloca por encima del pseudo-elemento */
+}
+
+header h2 {
+  color: white;
+  font-size: 50px;
+  text-shadow: 1px 1px 2px #000, 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+  color: white;
+  text-shadow: 1px 1px 2px #000000, 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
 section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.publish-logined {
+  border-radius: 20px;
+}
+
+.publish-logined form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+/* Título del formulario */
+.publish-logined h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Estilo de las etiquetas */
+.publish-logined label {
+  font-weight: bold;
+  color: #555;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Estilo de los campos de entrada */
+.publish-logined input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Estilo para el campo de archivo */
+.publish-logined input[type="file"] {
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #fafafa;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Estilo del botón de envío */
+.publish-logined input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.publish-logined input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Estilo para cuando el campo de entrada está en foco */
+.publish-logined input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+input[type="file"]:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+/* Estilo para la caja de texto (textarea) */
+.publish-logined textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Responsividad */
+@media (max-width: 500px) {
+  form {
+    padding: 15px;
+  }
+
+  input[type="submit"] {
+    font-size: 16px;
+  }
 }
 
 footer {
-    background-color: #004d40;
-    color: #fff;
-    text-align: center;
-    padding: 20px 10px;
-    margin-top: 20px;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 20px;
+  background: rgb(35,59,79);
+  background: linear-gradient(90deg, rgba(35,59,79,1) 0%, rgba(37,103,152,1) 50%, rgba(35,59,79,1) 100%); 
 }

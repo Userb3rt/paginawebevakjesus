@@ -14,12 +14,6 @@
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/modal.css" />
-    <script defer>
-      function toggleMenu() {
-        const menu = document.querySelector(".menu");
-        menu.classList.toggle("menu-open");
-      }
-    </script>
   </head>
   <body>
     <nav>
@@ -33,16 +27,31 @@
         <li><a href="kalender.html">Kalender</a></li>
         <li><a href="zeiten.html">Zeiten</a></li>
         <li><a href="ort.html">Ort</a></li>
-        <li><a href="#" id="zunganglogin">Anmelden</a></li>
       </ul>
     </nav>
 
     <header>
-      <h2>Veranstaltungen</h2>
+      <h2>Veröffentlichungen</h2>
       <p>
         Erfahren Sie mehr über unsere kommenden Veranstaltungen und Aktivitäten.
       </p>
     </header>
+
+    <section class="publish-logined">
+      <form action="/tu_ruta_de_publicacion" method="post" enctype="multipart/form-data">
+          <label for="Titel">Titel:</label><br>
+          <input type="text" id="title" name="title" required><br><br>
+  
+          <label for="kommentar">Kommentar:</label><br>
+          <textarea id="kommentar" name="kommentar" rows="4" cols="50" required></textarea><br><br>
+  
+          <label for="foto">Foto hochladen:</label><br>
+          <input type="file" id="foto" name="foto" accept="image/*" required><br><br>
+  
+          <input type="submit" value="Veröffentlichen">
+      </form>
+  </section>
+  
 
     <section>
       <h2>Details zu unseren Veranstaltungen</h2>
@@ -61,4 +70,5 @@
       </p>
     </footer>
   </body>
+  <script src="js/scripts.js"></script>
 </html>

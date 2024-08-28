@@ -1,34 +1,101 @@
+/* Estilos para el modal */
 .modal {
     display: none;
     position: fixed;
     z-index: 1;
-    left: 0;
-    top: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Mueve el modal al centro */
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad para el efecto de modal */
+    align-items: center;
+    justify-content: center;
 }
 
+/* Estilos para el contenido del modal */
 .modal-content {
-    background-color: #fff;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 8px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px; /* Bordes más redondeados para un aspecto moderno */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+  width: 90%;
+  max-width: 400px; /* Ancho máximo */
+  text-align: center;
 }
 
+/* Estilos para el botón de cierre */
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #333;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: -10px;
+  margin-right: -10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .close:hover,
 .close:focus {
-    color: #000;
-    cursor: pointer;
+  color: #00796b; /* Cambio de color al hacer hover o focus */
+  cursor: pointer;
+}
+
+/* Estilos para los inputs */
+.modal-content input[type="text"],
+.modal-content input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+.modal-content input[type="text"]:focus,
+.modal-content input[type="password"]:focus {
+  border-color: #00796b; /* Cambio de color al enfocar el campo */
+  outline: none;
+}
+
+/* Estilos para el botón */
+.btn {
+  background-color: #00796b; /* Color principal */
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #005f56; /* Color más oscuro al hacer hover */
+}
+
+.btn:focus {
+  outline: none;
+  background-color: #006f63;
+}
+
+/* Mejora de la accesibilidad: ocultar el borde de enfoque predeterminado */
+button:focus,
+input:focus {
+  outline: none;
+}
+
+/* Responsividad */
+@media (max-width: 500px) {
+  .modal-content {
+    width: 90%;
+  }
 }
