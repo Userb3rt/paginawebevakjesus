@@ -5,6 +5,10 @@ section {
   margin: auto;
 }
 
+section iframe{
+    padding: 10px;
+}
+
 .publish-logined {
   border-radius: 20px;
 }
