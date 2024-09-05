@@ -43,10 +43,9 @@
         method="post"
         enctype="multipart/form-data"
       >
-        <label for="Titel">Titel:</label><br />
-        <input type="text" id="title" name="title" required /><br /><br />
-
-        <label for="kommentar">Kommentar:</label><br />
+        <label for="Titel">Titel:</label>
+        <input type="text" id="title" name="title" required />
+        <label for="kommentar">Kommentar:</label>
         <textarea
           id="kommentar"
           name="kommentar"
@@ -54,16 +53,16 @@
           cols="50"
           required
         ></textarea
-        ><br /><br />
+        >
 
-        <label for="foto">Foto hochladen:</label><br />
+        <label for="foto">Foto hochladen:</label>
         <input
           type="file"
           id="foto"
           name="foto"
           accept="image/*"
           required
-        /><br /><br />
+        />
 
         <input type="submit" value="Veröffentlichen" />
       </form>
